@@ -1,0 +1,31 @@
+body  {
+    height: 100vh;
+    overflow-y: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #fffcec;
+}
+
+img {
+    border: 4px solid tomato;
+    border-radius: 3px;
+
+    margin-bottom: 25px;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+
+    padding: 6px 15px;
+    background-color:tomato;
+    border-radius: 5px;
+
+    color: white;
+
+    margin-top: 25px;
+}

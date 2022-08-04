@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>On click</title>
+
+    <style>
+        body {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            background-color: turquoise;
+        }
+
+        h1,
+        h3,
+        p {
+            cursor: pointer;
+
+            padding: 16px;
+            border-radius: 4px;
+            background-color: blueviolet;
+        }
+
+        .last-box a {
+            cursor: pointer;
+            text-decoration: none;
+
+            padding: 16px;
+            border-radius: 4px;
+            background-color: rgb(64, 230, 14);
+        }
+
+        .last-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img class="first">
+        <h1 onclick="toOpenTheFirstOne()"> Hello </h1>
+    </div>
+    <div>
+        <img class="second">
+        <h3 onclick="toOpenTheSecondOne()"> How have you been? </h3>
+    </div>
+    <div class="last-box">
+        <img class="third">
+        <p onclick="toOpenTheThirdOne()">
+            I have been thinking about you for the last year
+        </p>
+        <a onclick="toOpenTheThirdOne()" href=""> Can we talk? </a>
+    </div>
+</body>
+
+<script>
+    function toOpenTheFirstOne() {
+        const first = document.querySelector('.first')
+
+        first.src = `https://cdn.discordapp.com/attachments/910686336518864926/930168520967352320/tenor_1.gif`
+    }
+
+    function toOpenTheSecondOne() {
+        const second = document.querySelector('.second')
+
+        second.src = `https://cdn.discordapp.com/attachments/910686336518864926/930168521705529374/tenor_2.gif`
+    }
+
+    function toOpenTheThirdOne() {
+        const third = document.querySelector('.third')
+
+        third.src = `https://cdn.discordapp.com/attachments/910686336518864926/930168522468888606/tenor.gif`
+    }
+</script>
+
+</html>

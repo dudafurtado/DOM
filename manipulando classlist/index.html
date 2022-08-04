@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Classlist </title>
+
+    <style>
+        body {
+            height: 100vh;
+            overflow-y: hidden;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            background-color: yellow;
+            color: darkblue;
+        }
+
+        button {
+            all: unset;
+
+            padding: 13px;
+            border-radius: 11px;
+            background-color: darkblue;
+            color: yellow;
+
+            cursor: pointer;
+        }
+
+        .escondido,
+        .hidden,
+        .paragrafo {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="aparecerNovidade()"> Novidade aqui </button>
+    <p class="paragrafo">
+        Surpresa
+    </p>
+    <button onclick="aparecerOutraNovidade()"> Outra novidade </button>
+    <p class="escondido">
+        Surprise
+    </p>
+    <button onclick="ComeOn()"> Come on out </button>
+    <p class="hidden">
+        I'm here
+    </p>
+</body>
+
+<script>
+    const paragrafo = document.querySelector('.paragrafo')
+
+    function aparecerNovidade() {
+        paragrafo.style.display = paragrafo.style.display === "block" ? "none" : "block"
+    }
+
+    const escondido = document.querySelector('.escondido')
+
+    function aparecerOutraNovidade() {
+        if (escondido.classList.contains('escondido')) {
+            escondido.classList.remove('escondido')
+        } else
+            escondido.classList.add('escondido')
+    }
+
+    const itIsOritIsNot = document.querySelector('.hidden')
+
+    function ComeOn() {
+        itIsOritIsNot.classList.toggle('hidden')
+    }
+</script>
+
+</html>

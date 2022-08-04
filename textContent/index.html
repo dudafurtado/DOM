@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Text content</title>
+
+    <style>
+        h1 {
+            color: blue;
+            background-color: black;
+        }
+
+        h2 {
+            color: rgb(173, 27, 209);
+            background-color: black;
+        }
+
+        h3 {
+            color: rgba(255, 135, 79, 0.911);
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Maria Eduarda </h1>
+    <h2><span style="display: none;">Cerqueira </span>Furtado</h2>
+    <h3> Melo </h3>
+</body>
+
+<script>
+    const firstName = document.querySelector('h1');
+    const middleName = document.querySelector('h2');
+    const lastName = document.querySelector('h3');
+
+    console.log(middleName.innerText);
+    console.log(middleName.textContent);
+
+    firstName.textContent = "Duda"
+    middleName.textContent = "Dudinha"
+    lastName.textContent = "Dudão"
+</script>
+
+</html>
